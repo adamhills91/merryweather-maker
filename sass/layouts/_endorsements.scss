@@ -1,0 +1,121 @@
+.endorsements {
+  margin: var(--site-margin) 0;
+  padding: 0 var(--site-padding);
+  text-align: center;
+
+  .container {
+    padding: var(--site-margin) var(--site-padding);
+    background: $color__light-green;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+    .text-container {
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+
+      h2 {
+        font-size: 30px;
+        letter-spacing: -0.03em;
+        font-family: $font__sub;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    .endorsements-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 90px;
+
+      .endorsement {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        .text-container {
+          gap: 20px;
+
+          h3 {
+            font-size: 20px;
+            margin: 0;
+          }
+
+          p {
+            font-size: 20px;
+          }
+        }
+
+        .btn {
+          border-radius: 10px;
+          width: fit-content;
+        }
+      }
+    }
+  }
+}
+
+// tablet
+@media (min-width: 750px) {
+  .endorsements {
+    .container {
+      .text-container {
+        h2 {
+          font-size: 32px;
+        }
+        p {
+          font-size: 18px;
+        }
+      }
+      .endorsements-container {
+        flex-direction: row;
+        gap: 40px;
+      }
+    }
+  }
+}
+
+// small desktop
+@media (min-width: $small-desktop) {
+  .endorsements {
+    .container {
+      gap: 120px;
+
+      .text-container {
+        h2 {
+          font-size: 36px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+
+      .endorsements-container {
+        flex-direction: row;
+        gap: 60px;
+      }
+    }
+  }
+}
+
+// desktop
+@media (min-width: $desktop) {
+  .endorsements {
+    .container {
+      .text-container {
+        h2 {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}

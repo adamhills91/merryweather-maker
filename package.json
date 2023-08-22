@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
+    "esbuild-base": "esbuild js/scripts.js --bundle --minify --outfile=js/scripts.min.js --format=cjs",
+    "esbuild": "npm run esbuild-base -- --sourcemap"
+  },
+  "dependencies": {
+    "esbuild": "^0.19.1",
+    "gsap": "^3.12.2",
+    "swiper": "^10.1.0"
+  }
+}

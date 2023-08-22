@@ -1,0 +1,123 @@
+.container.account-page {
+  // max-width: 800px;
+  position: relative;
+
+  .image-container {
+    position: absolute;
+    max-width: 150px;
+    top: calc(var(--site-padding) / 4);
+    right: calc(var(--site-padding) * 2);
+  }
+  .woocommerce-form-login {
+    // background: $color__white;
+    border: none;
+    border-radius: 20px;
+    // padding: var(--site-padding);
+    padding: 0;
+  }
+  input {
+    border: none;
+    padding: 15px;
+  }
+
+  button {
+    background: $color__mid-green;
+    color: $color__white;
+
+    &:hover {
+      opacity: 0.7;
+      background: $color__mid-green;
+      color: $color__white;
+    }
+  }
+
+  .woocommerce {
+    display: flex;
+    flex-direction: column;
+
+    .woocommerce-MyAccount-navigation {
+      width: 100%;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        li {
+          list-style-type: none;
+          padding: 15px;
+          border-radius: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+
+          a {
+            font-weight: 600;
+          }
+
+          &.is-active {
+            background: $color__mid-green;
+            a {
+              color: $color__white;
+            }
+          }
+
+          &.woocommerce-MyAccount-navigation-link--customer-logout {
+            background: $color__white;
+            border: 2px solid $color__mid-green;
+            padding: 0;
+
+            a {
+              padding: 15px;
+              height: 100%;
+              width: 100%;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    .woocommerce-MyAccount-content {
+      width: 100%;
+    }
+
+    a.edit {
+      background: $color__mid-green;
+      color: $color__white;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
+  }
+
+  .form-row {
+    margin-bottom: 20px;
+    padding: 0;
+  }
+}
+
+// tablet
+@media (min-width: $tablet) {
+}
+
+// small desktop
+@media (min-width: $small-desktop) {
+  .container.account-page {
+    .woocommerce {
+      .woocommerce-MyAccount-navigation {
+        ul {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}
+
+// desktop
+@media (min-width: $desktop) {
+}
+
+// large desktop
+@media (min-width: 1280px) {
+}

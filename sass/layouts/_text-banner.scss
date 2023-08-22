@@ -1,0 +1,57 @@
+.text-banner {
+  margin: var(--site-margin) 0;
+
+  .banner {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color__light-green;
+    padding: var(--site-padding);
+    border-radius: 20px;
+
+    h2 {
+      text-transform: uppercase;
+      font-family: $font__logo;
+      font-size: 40px;
+      letter-spacing: 0.02em;
+      font-weight: 600;
+      line-height: 1;
+      text-align: center;
+      margin-top: 0.25em;
+    }
+  }
+}
+
+// tablet
+@media (min-width: $tablet) {
+  .text-banner {
+    .banner {
+      h2 {
+        font-size: 45px;
+      }
+    }
+  }
+}
+
+// small desktop
+@media (min-width: $small-desktop) {
+  .text-banner {
+    .banner {
+      h2 {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+// desktop
+@media (min-width: $desktop) {
+  .text-banner {
+    .banner {
+      h2 {
+        font-size: 60px;
+      }
+    }
+  }
+}

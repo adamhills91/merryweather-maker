@@ -1,0 +1,36 @@
+$size__site-main: 100%;
+$size__site-sidebar: 25%;
+
+$container__max-width: 1500px;
+
+$tablet: 481px;
+$small-desktop: 975px;
+$desktop: 1280px;
+
+:root {
+  --site-padding: 20px;
+  --site-margin: 70px;
+}
+
+// tablet
+@media (min-width: $tablet) {
+  :root {
+    --site-padding: 40px;
+    --site-margin: 90px;
+  }
+}
+
+// small desktop
+@media (min-width: $small-desktop) {
+  :root {
+    --site-margin: 110px;
+  }
+}
+
+// desktop
+@media (min-width: $desktop) {
+  :root {
+    --site-padding: 60px;
+    --site-margin: 110px;
+  }
+}

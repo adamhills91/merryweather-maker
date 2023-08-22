@@ -1,0 +1,132 @@
+footer.site-footer {
+  background: $color__mid-green;
+
+  padding: var(--site-padding);
+  margin-top: var(--site-margin);
+
+  .site-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    color: $color__white;
+    background: none;
+
+    ul#footer-menu {
+      width: 100%;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+
+      li {
+        a {
+          color: $color__white;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .bottom-row {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      font-size: 12px;
+      width: 100%;
+
+      div {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        opacity: 0.5;
+
+        &:first-of-type {
+          // margin-right: auto;
+        }
+
+        &:last-of-type {
+          // margin-left: auto;
+        }
+      }
+
+      .copyright {
+        order: 2;
+
+        p {
+          margin: 0;
+        }
+      }
+
+      .socials {
+        display: flex;
+        gap: 17px;
+        opacity: 1;
+        order: 1;
+
+        .social-account {
+          width: 38px;
+          height: 38px;
+          border-radius: 38px;
+          background: $color__light-green;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+
+      .credit {
+        order: 3;
+        a {
+          color: $color__white;
+          text-decoration: underline;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// tablet
+@media (min-width: $tablet) {
+}
+
+// small desktop
+@media (min-width: $small-desktop) {
+  footer.site-footer {
+    .site-info {
+      .bottom-row {
+        flex-direction: row;
+
+        .copyright {
+          order: 1;
+        }
+
+        .socials {
+          order: 2;
+        }
+
+        div {
+          &:first-of-type {
+            margin-right: auto;
+          }
+
+          &:last-of-type {
+            margin-left: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+// desktop
+@media (min-width: $desktop) {
+}

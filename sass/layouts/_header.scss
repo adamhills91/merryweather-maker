@@ -1,0 +1,72 @@
+@import "../abstracts/variables/structure";
+
+header.site-header {
+  padding: 20px var(--site-padding);
+  position: relative;
+  overflow-x: clip;
+  z-index: 999;
+  background: none;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    background-color: $color__white;
+    padding: 0;
+
+    .site-branding {
+      width: 50%;
+      max-width: 162px;
+      min-width: 100px;
+    }
+
+    .navigations {
+      flex: 1;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 30px;
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+// tablet
+@media (min-width: $tablet) {
+  header.site-header {
+    padding: 30px var(--site-padding);
+
+    .container {
+      .navigations {
+        gap: 40px;
+      }
+    }
+  }
+}
+
+// small desktop
+@media (min-width: $small-desktop) {
+  header.site-header {
+    padding: 40px 0;
+
+    .container {
+      padding: 0 var(--site-padding);
+      .navigations {
+        justify-content: flex-end;
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+// desktop
+@media (min-width: $desktop) {
+  header.site-header {
+    padding: 44px 0;
+  }
+}
+
+// large desktop
+@media (min-width: 1280px) {
+}

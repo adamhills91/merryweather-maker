@@ -1,0 +1,276 @@
+.contact-form {
+  padding: var(--site-padding) 0 0;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .text-container {
+      text-align: center;
+
+      h1 {
+        margin-bottom: 0.5em;
+      }
+
+      p {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .form-container {
+      background-color: $color__light-green;
+      border-radius: 20px;
+
+      .container {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: var(--site-padding);
+
+        .contact-information {
+          padding: var(--site-padding);
+          border-radius: 20px;
+          background-color: $color__white;
+
+          h2 {
+          }
+
+          .contact-details {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .detail {
+              display: flex;
+              align-items: center;
+              gap: 20px;
+
+              p {
+                margin: 0;
+                font-size: 14px;
+              }
+
+              a {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+              }
+
+              img {
+                width: 20px;
+              }
+
+              &.email {
+                p {
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+
+          .socials {
+            margin-top: 60px;
+            display: flex;
+            gap: 20px;
+
+            a {
+              background: $color__light-green;
+              border-radius: 30px;
+              height: 40px;
+              width: 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+
+        .form {
+          form {
+            .wpforms-field-container {
+              label {
+                letter-spacing: 0.02em;
+                opacity: 0.6;
+
+                &:has(+ input:focus),
+                &:has(+ input:not(:placeholder-shown)),
+                &:has(+ textarea:focus),
+                &:has(+ textarea:not(:placeholder-shown)) {
+                  opacity: 1;
+                }
+              }
+
+              input {
+                background: transparent;
+                border: none;
+                border-bottom: 1px solid $color__dark-green;
+                border-radius: 0;
+                padding: 0 5px;
+                box-shadow: none;
+
+                &:focus {
+                  outline: none;
+                  box-shadow: none;
+                }
+
+                &:not(:placeholder-shown),
+                &:focus {
+                  border-width: 2px;
+                }
+
+                &:-webkit-autofill,
+                &:-webkit-autofill:hover,
+                &:-webkit-autofill:focus,
+                &:-webkit-autofill:active {
+                  -webkit-box-shadow: 0 0 0 30px $color__light-green inset !important;
+                }
+              }
+
+              textarea {
+                background: none;
+                border: none;
+                border-radius: 0;
+                border-bottom: 1px solid $color__dark-green;
+                padding: 10px;
+
+                &:focus {
+                  outline: none;
+                  box-shadow: none;
+                }
+
+                &:not(:placeholder-shown),
+                &:focus {
+                  border-width: 2px;
+                }
+              }
+              .wpforms-one-half {
+                width: 100%;
+                margin: 0;
+              }
+            }
+
+            .wpforms-submit-container {
+              text-align: center;
+            }
+            button[type="submit"] {
+              letter-spacing: 0.02em;
+              margin: 0 auto;
+              font-size: 18px;
+              background-color: $color__mid-green;
+              border-radius: 10px;
+              padding: 20px 30px;
+              height: auto;
+            }
+          }
+          .wpforms-confirmation-container-full {
+            border-radius: 20px;
+            border: none;
+            background: $color__mid-green;
+            color: white;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+// tablet
+@media (min-width: $tablet) {
+  .contact-form {
+    .container {
+      .form-container {
+        .container {
+          .contact-information {
+            .contact-details {
+              .detail {
+                &.email {
+                  p {
+                    font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+
+          .form {
+            form {
+              .wpforms-field-container {
+                .wpforms-one-half {
+                  width: calc(50% - 20px);
+                  &.wpforms-first {
+                    margin-right: 20px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// small desktop
+@media (min-width: $small-desktop) {
+  .contact-form {
+    .container {
+      .text-container {
+        p {
+          font-size: 20px;
+          max-width: 850px;
+        }
+      }
+      .form-container {
+        .container {
+          flex-direction: row;
+
+          .contact-information {
+            display: flex;
+            flex-direction: column;
+
+            .contact-details {
+              flex-grow: 1;
+              .detail {
+                p {
+                  font-size: 16px;
+                }
+
+                &.email {
+                  p {
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+          }
+
+          .form {
+            flex-grow: 1;
+            form {
+              .wpforms-field-container {
+                .wpforms-one-half {
+                  width: calc(50% - 20px);
+                  &.wpforms-first {
+                    margin-right: 20px;
+                  }
+                }
+              }
+
+              .wpforms-submit-container {
+                text-align: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// desktop
+@media (min-width: $desktop) {
+}

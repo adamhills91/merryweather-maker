@@ -1,0 +1,55 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  clear: both;
+  margin: 0;
+}
+
+h1 {
+  font-family: $font__sub;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: MIN(32px, 8vw);
+}
+
+h2 {
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+@media (min-width: $tablet) {
+  h1 {
+    font-size: 40px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $small-desktop) {
+  h1 {
+    font-size: 55px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: $desktop) {
+  h1 {
+    font-size: 65px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+}
