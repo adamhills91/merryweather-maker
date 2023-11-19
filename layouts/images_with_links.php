@@ -6,7 +6,7 @@
           <div class="img-container">
             <a href="<?= $link['link'] ?>" class=""><?php echo wp_get_attachment_image($link['image']['id'], "large"); ?></a>
           </div>
-          <a href="<?= $link['link'] ?>" class="btn"><?= $link['link_text']; ?></a>
+          <a href="<?= get_page_link($link['link']); ?>" class="btn"><?= $link['link_text']; ?></a>
         </div>
       <?php } ?>
     </div>
