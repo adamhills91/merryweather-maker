@@ -103,8 +103,6 @@ function merryweather_maker_setup()
 			'flex-height' => true,
 		)
 	);
-
-	add_theme_support('woocommerce');
 }
 add_action('after_setup_theme', 'merryweather_maker_setup');
 
