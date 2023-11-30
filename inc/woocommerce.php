@@ -46,7 +46,7 @@ add_action('after_setup_theme', 'merryweather_maker_woocommerce_setup');
  */
 function merryweather_maker_woocommerce_scripts()
 {
-	wp_enqueue_style('merryweather-maker-woocommerce-style', get_stylesheet_directory_uri() . '/woocommerce.css', array(), _S_VERSION);
+	// wp_enqueue_style('merryweather-maker-woocommerce-style', get_stylesheet_directory_uri() . '/woocommerce.css', array(), _S_VERSION);
 
 	$font_path   = WC()->plugin_url() . '/assets/fonts/';
 	$inline_font = '@font-face {
@@ -60,9 +60,9 @@ function merryweather_maker_woocommerce_scripts()
 			font-style: normal;
 		}';
 
-	// wp_add_inline_style('merryweather-maker-woocommerce-style', $inline_font);
+	wp_add_inline_style('merryweather-maker-woocommerce-style', $inline_font);
 }
-// add_action('wp_enqueue_scripts', 'merryweather_maker_woocommerce_scripts');
+add_action('wp_enqueue_scripts', 'merryweather_maker_woocommerce_scripts');
 
 /**
  * Disable the default WooCommerce stylesheet.
