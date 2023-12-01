@@ -2,8 +2,9 @@
   margin: var(--site-margin) 0;
 
   .features {
-    display: flex;
-    gap: 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
     flex-direction: column;
 
     .feature {
@@ -51,6 +52,7 @@
 @media (min-width: $tablet) {
   .key-features {
     .features {
+      grid-template-columns: 1fr 1fr 1fr;
       .feature {
         .text-container {
           h3 {

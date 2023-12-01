@@ -55,7 +55,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 :root {
   --site-padding: 20px;
-  --site-margin: 70px;
+  --site-margin: 50px;
 }
 
 @media (min-width: 481px) {
@@ -66,7 +66,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 @media (min-width: 975px) {
   :root {
-    --site-margin: 110px;
+    --site-margin: 100px;
   }
 }
 @media (min-width: 1280px) {
@@ -94,7 +94,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 :root {
   --site-padding: 20px;
-  --site-margin: 70px;
+  --site-margin: 50px;
 }
 
 @media (min-width: 481px) {
@@ -105,7 +105,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 @media (min-width: 975px) {
   :root {
-    --site-margin: 110px;
+    --site-margin: 100px;
   }
 }
 @media (min-width: 1280px) {
@@ -782,7 +782,7 @@ textarea {
 --------------------------------------------------------------*/
 :root {
   --site-padding: 20px;
-  --site-margin: 70px;
+  --site-margin: 50px;
 }
 
 @media (min-width: 481px) {
@@ -793,7 +793,7 @@ textarea {
 }
 @media (min-width: 975px) {
   :root {
-    --site-margin: 110px;
+    --site-margin: 100px;
   }
 }
 @media (min-width: 1280px) {
@@ -1098,11 +1098,6 @@ footer.site-footer .site-info .bottom-row .credit p {
     width: 90%;
   }
 }
-@media (min-width: 1280px) {
-  .homepage-hero .container .image-container {
-    height: unset;
-  }
-}
 .images-with-links {
   margin: var(--site-margin) 0;
 }
@@ -1150,6 +1145,7 @@ footer.site-footer .site-info .bottom-row .credit p {
   line-height: 1;
   padding: 0.8em 1.6em 0.6em;
   letter-spacing: 0.05em;
+  text-wrap: nowrap;
 }
 
 @media (min-width: 750px) {
@@ -1183,8 +1179,9 @@ footer.site-footer .site-info .bottom-row .credit p {
   margin: var(--site-margin) 0;
 }
 .key-features .features {
-  display: flex;
-  gap: 60px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
   flex-direction: column;
 }
 .key-features .features .feature {
@@ -1225,6 +1222,9 @@ footer.site-footer .site-info .bottom-row .credit p {
 }
 
 @media (min-width: 481px) {
+  .key-features .features {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
   .key-features .features .feature .text-container h3 {
     font-size: 28px;
     max-width: 175px;
@@ -1713,7 +1713,8 @@ footer.site-footer .site-info .bottom-row .credit p {
   font-size: 16px;
 }
 .endorsements .container .endorsements-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   flex-direction: column;
   justify-content: space-between;
   gap: 90px;
@@ -1747,7 +1748,7 @@ footer.site-footer .site-info .bottom-row .credit p {
     font-size: 18px;
   }
   .endorsements .container .endorsements-container {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
   }
 }
@@ -2313,7 +2314,7 @@ form.comment-form input.submit {
 --------------------------------------------- */
 :root {
   --site-padding: 20px;
-  --site-margin: 70px;
+  --site-margin: 50px;
 }
 
 @media (min-width: 481px) {
@@ -2324,7 +2325,7 @@ form.comment-form input.submit {
 }
 @media (min-width: 975px) {
   :root {
-    --site-margin: 110px;
+    --site-margin: 100px;
   }
 }
 @media (min-width: 1280px) {
@@ -2361,7 +2362,7 @@ form.comment-form input.submit {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  height: calc(100vh - 80px);
 }
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -2486,6 +2487,9 @@ form.comment-form input.submit {
 }
 
 @media (min-width: 481px) {
+  .main-navigation ul {
+    height: calc(100vh - 120px);
+  }
   .shop-navigation {
     gap: 30px;
   }
@@ -2502,6 +2506,7 @@ form.comment-form input.submit {
     flex-direction: row;
     gap: 0;
     border: none;
+    height: auto;
   }
   .shop-navigation img {
     height: 22px;

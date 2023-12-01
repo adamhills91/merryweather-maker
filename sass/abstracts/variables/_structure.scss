@@ -9,7 +9,7 @@ $desktop: 1280px;
 
 :root {
   --site-padding: 20px;
-  --site-margin: 70px;
+  --site-margin: 50px;
 }
 
 // tablet
@@ -23,7 +23,7 @@ $desktop: 1280px;
 // small desktop
 @media (min-width: $small-desktop) {
   :root {
-    --site-margin: 110px;
+    --site-margin: 100px;
   }
 }
 
