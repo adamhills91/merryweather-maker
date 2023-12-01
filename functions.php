@@ -148,8 +148,8 @@ function merryweather_maker_scripts()
 	wp_enqueue_style('merryweather-maker-style', get_stylesheet_uri(), array(), _S_VERSION);
 	wp_style_add_data('merryweather-maker-style', 'rtl', 'replace');
 
-	// wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js', array(), false, true);
-	// wp_enqueue_script('scrolltrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js', array(), false, true);
+	wp_enqueue_script('gsap', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js', array(), false, true);
+	wp_enqueue_script('scrolltrigger', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js', array(), false, true);
 	wp_enqueue_script('merryweather-maker-navigation', get_stylesheet_directory_uri() . '/js/scripts.min.js', array(), _S_VERSION, true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {
