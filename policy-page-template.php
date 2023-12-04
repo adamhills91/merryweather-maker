@@ -7,11 +7,10 @@ get_header();
 
   <section class="policy-page">
 
-    <?php the_title();
+    <h1><?php the_title(); ?></h1>
 
-    the_content();
+    <?php the_content(); ?>
 
-    ?>
   </section>
 
 </main><!-- #main -->
