@@ -5,11 +5,14 @@ get_header();
 
 <main id="primary" class="site-main">
 
-  <?php the_title();
+  <section class="policy-page">
 
-  the_content();
+    <?php the_title();
 
-  ?>
+    the_content();
+
+    ?>
+  </section>
 
 </main><!-- #main -->
 
