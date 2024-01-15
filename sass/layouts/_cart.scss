@@ -26,6 +26,10 @@
 
       .onsale {
         background-color: $color__mid-green;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
   }
