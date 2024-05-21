@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "watch:sass": "sass --watch sass/style.scss:./style.css --source-map --style=expanded",
     "esbuild-watch": "npm run esbuild-base -- --sourcemap --watch",
     "esbuild-base": "esbuild js/scripts.js --bundle --minify --outfile=js/scripts.min.js --format=cjs",
     "esbuild": "npm run esbuild-base -- --sourcemap"
